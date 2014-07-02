@@ -13,6 +13,9 @@ gem 'mongo_mapper'
 gem 'bson_ext'
 
 gem 'jquery-rails'
+gem 'execjs'
+gem 'therubyracer'
+
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
