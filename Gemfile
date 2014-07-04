@@ -9,6 +9,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development, :test do
+  gem 'turn'
+end
+
 gem 'mongo_mapper'
 gem 'bson_ext'
 
@@ -17,7 +21,9 @@ gem 'execjs'
 gem 'therubyracer'
 
 gem 'haml-rails'
+gem 'jbuilder'
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
+gem 'factory_girl_rails'
 
 gem 'unicorn'
