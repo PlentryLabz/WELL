@@ -1,21 +1,26 @@
 class Record
   include MongoMapper::Document
 
-  TYPES = {
-    string: String,
-  }
+  key :data, Hash
+  timestamps!
+  attr_accessible :data
+
+  validate :data_validation
 
   belongs_to :list
-  timestamps!
-
-  before_create :setup_keys
 
   private
 
-  def setup_keys
-    list.fields.each do |k, v|
-      self.class.key k, TYPES[v]
+  def data_validation
+    wrong_data_fields = data.keys - list.fields.keys
+    empty_data_fields = list.fields.keys - data.keys
+
+    unless wrong_data_fields == []
+      errors.add(:data, "Data includes wrong fields: #{wrong_data_fields}")
+    end
+
+    unless empty_data_fields == []
+      errors.add(:data, "Data fields empty: #{empty_data_fields}")
     end
   end
-
 end
