@@ -3,7 +3,8 @@ class List
 
   key :title, String, required: true
   key :fields, Hash
-  attr_accessible :name, :fields
+  timestamps!
+  attr_accessible :title, :fields
 
   belongs_to :user
   many :records

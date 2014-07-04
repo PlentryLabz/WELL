@@ -1,3 +1,0 @@
-== the List
-
-=== lists service
