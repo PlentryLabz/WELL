@@ -19,6 +19,7 @@ gem 'bson_ext'
 gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
+gem "rails-backbone"
 
 gem 'haml-rails'
 gem 'jbuilder'

@@ -41,6 +41,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    ejs (1.0.0)
     erubis (2.7.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -97,6 +98,10 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
+    rails-backbone (0.7.2)
+      coffee-script (~> 2.2.0)
+      ejs (~> 1.0.0)
+      railties (>= 3.1.0)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -159,6 +164,7 @@ DEPENDENCIES
   jquery-rails
   mongo_mapper
   rails (= 3.2.13)
+  rails-backbone
   sass-rails (~> 3.2.3)
   simple_form
   therubyracer
