@@ -7,10 +7,13 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'bower-rails'
 end
 
 group :development, :test do
   gem 'turn'
+  gem 'quiet_assets'
 end
 
 gem 'mongo_mapper'
@@ -19,7 +22,6 @@ gem 'bson_ext'
 gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
-gem 'backbone-on-rails'
 
 gem 'haml-rails'
 gem 'jbuilder'

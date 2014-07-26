@@ -22,3 +22,5 @@ coverage
 /bin
 
 Procfile
+
+/lib/assets/bower_components/

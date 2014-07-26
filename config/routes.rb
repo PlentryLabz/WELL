@@ -3,15 +3,16 @@ Thelist::Application.routes.draw do
   resource :wellcome, only: [:show]
   root to: 'wellcome#show'
 
-  resources :lists, only: [:index, :show]
+  resources :users, only: [:index, :show, :edit]
 
-  namespace :api do
+  namespace :api, defaults: {format: :json} do
     namespace :v1 do
-      resources :lists, only: [:index, :create, :update, :destroy] do
+      resources :lists, except: [:new, :edit] do
         scope module: :lists do
-          resources :records, only: [:index, :create, :update, :destroy]
+          resources :records, except: [:new, :edit]
         end
       end
+      resources :users, only: [:index, :show, :update]
 
     end
   end

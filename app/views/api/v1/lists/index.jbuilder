@@ -1,0 +1,1 @@
+json.array! @lists, :id, :title, :fields, :user_id

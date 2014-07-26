@@ -3,6 +3,9 @@ class Api::V1::Lists::RecordsController < Api::V1::ApplicationController
   def index
   end
 
+  def show
+  end
+
   def create
   end
 
