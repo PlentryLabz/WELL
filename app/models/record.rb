@@ -1,8 +1,11 @@
 class Record
   include MongoMapper::Document
 
+  TYPES = {
+    string: String,
+  }
+
   key :data, Hash
-  timestamps!
   attr_accessible :data
 
   validate :data_validation

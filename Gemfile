@@ -29,4 +29,7 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'factory_girl_rails'
 
+gem 'devise'
+gem 'mm-devise'
+
 gem 'unicorn'

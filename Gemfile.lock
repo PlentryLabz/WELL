@@ -30,6 +30,16 @@ GEM
       multi_json (~> 1.0)
     ansi (1.4.3)
     arel (3.0.3)
+    backbone-on-rails (1.1.1.0)
+      actionmailer
+      actionpack
+      activemodel
+      activeresource
+      eco
+      ejs
+      jquery-rails
+      railties
+    bcrypt (3.1.7)
     bower-rails (0.7.3)
     bson (1.10.2)
     bson_ext (1.10.2)
@@ -42,6 +52,19 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    eco (1.0.0)
+      coffee-script
+      eco-source
+      execjs
+    eco-source (1.1.0.rc.1)
+    ejs (1.0.0)
+    ejs (1.1.1)
     erubis (2.7.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -72,6 +95,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mm-devise (2.0)
+      devise (>= 1.2)
+      mongo_mapper (>= 0.9.0)
     mongo (1.10.2)
       bson (= 1.10.2)
     mongo_mapper (0.13.0)
@@ -80,6 +106,7 @@ GEM
       mongo (~> 1.8)
       plucky (~> 0.6.5)
     multi_json (1.10.1)
+    orm_adapter (0.5.0)
     plucky (0.6.6)
       mongo (~> 1.5)
     polyglot (0.3.5)
@@ -129,6 +156,7 @@ GEM
       libv8 (~> 3.16.14.0)
       ref
     thor (0.19.1)
+    thread_safe (0.3.4)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
@@ -148,6 +176,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -156,11 +186,13 @@ DEPENDENCIES
   bower-rails
   bson_ext
   coffee-rails (~> 3.2.1)
+  devise
   execjs
   factory_girl_rails
   haml-rails
   jbuilder
   jquery-rails
+  mm-devise
   mongo_mapper
   quiet_assets
   rails (= 3.2.13)

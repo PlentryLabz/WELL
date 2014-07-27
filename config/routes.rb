@@ -1,5 +1,7 @@
 Thelist::Application.routes.draw do
 
+  devise_for :users
+
   resource :wellcome, only: [:show]
   root to: 'wellcome#show'
 
