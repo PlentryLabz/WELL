@@ -21,11 +21,19 @@ class Api::V1::ListsController < Api::V1::ApplicationController
   end
 
   def update
+    @list = List.find(params[:id])
 
+    if @list.update_attributes(params[:list])
+      respond_with(@list, location: nil)
+    else
+      render json: {errors: @list.errors_full_messages}, status: 422
+    end
   end
 
   def destroy
-
+    @list = List.find(params[:id])
+    @list.destroy
+    respond_with(@list, location: nil)
   end
 
 end
