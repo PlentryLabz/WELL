@@ -14,6 +14,8 @@ end
 group :development, :test do
   gem 'turn'
   gem 'quiet_assets'
+  gem 'pry'
+  gem 'awesome_print'
 end
 
 gem 'mongo_mapper'
