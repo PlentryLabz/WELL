@@ -16,7 +16,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     if @user.save
       respond_with(@user, location: nil)
     else
-      render json: {errors: @user.errors_full_messages}, status: 422
+      render json: {errors: @user.errors.full_messages}, status: 422
     end
   end
 
@@ -26,7 +26,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     if @user.update_attributes(params[:user])
       respond_with(@user, location: nil)
     else
-      render json: {errors: @user.errors_full_messages}, status: 422
+      render json: {errors: @user.errors.full_messages}, status: 422
     end
   end
 
