@@ -12,7 +12,7 @@ Thelist::Application.routes.draw do
           resources :records, except: [:new, :edit]
         end
       end
-      resources :users, only: [:index, :show, :update]
+      resources :users, except: [:new, :edit]
 
     end
   end
