@@ -11,7 +11,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
   end
 
   def create
-    @user = User.new(params[:list])
+    @user = User.new(params[:user])
 
     if @user.save
       respond_with(@user, location: nil)
