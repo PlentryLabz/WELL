@@ -1,4 +1,4 @@
-angular.module('app.loading', [])
+angular.module('App.loading', [])
     .config(['$httpProvider', function ($httpProvider) {
     var $http,
         interceptor = ['$q', '$injector', function ($q, $injector) {

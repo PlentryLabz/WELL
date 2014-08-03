@@ -1,0 +1,44 @@
+USER INFO
+
+<div ng-app="App">
+
+	<ng-view></ng-view>
+
+	<script type="text/ng-template" id="users-page.html">
+		<h1>USERS</h1>
+			<user ng-repeat="user in model.users" name="{{user.name}}" id="{{user.id}}"></user>
+	</script>
+
+	<script type="text/ng-template" id="user.html">
+		<div class="user">
+			<a ng-href="{{model.link}}" class="user__avatar">
+				<img src="{{model.avatar}}">
+			</a>
+			<a class="user__link" ng-href="{{model.link}}">{{model.name}}</a>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="list-mini.html">
+		<div class="list-mini">
+			<a ng-href="{{model.link}}" class="list__avatar">
+				<img src="{{model.avatar}}">
+			</a>
+			<a class="list__link" ng-href="{{model.link}}">{{model.name}}</a>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="user-page.html">
+			<img class="user-page__avatar" src="{{model.user.avatar}}">
+			<div class="user-page__right">
+				<span class="user-page__name">{{model.user.name}}</span>
+				<p class="user-page__info">{{model.user.info}}</p>
+			</div>
+			<hr/>
+			<div class="user-page__lists">
+				<div ng-repeat="list in model.lists">
+					<div list="list"></div>
+				</div>
+			</div>
+	</script>
+
+</div>
